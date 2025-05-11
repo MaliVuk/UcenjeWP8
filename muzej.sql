@@ -11,6 +11,7 @@ sifra int primary key,
 ime_i_prezime varchar(100),
 mail varchar (100)
 );naziv varchar(50),
+naziv varchar(50),
 iznos_uplate decimal (10,2)
 );
 
