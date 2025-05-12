@@ -12,12 +12,15 @@
 --dob int
 --);
 
-create table prostorije (
-sifra int,
-boja_prostorije varchar (20)
-);
+--create table prostorije (
+--sifra int,
+--boja_prostorije varchar (20)
+--);
 
 create table boravak (
-
+zivotinje int,
+prostorije int,
+datum_boravka_od date,
+datum_boravka_do date
 
 );
