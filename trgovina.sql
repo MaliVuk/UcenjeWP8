@@ -1,23 +1,27 @@
-﻿create database trgovina;
+﻿use master;
+go
+drop database if exists trgovina;
+go
+create database trgovina;
+go
 use trgovina;
 
 create table racuni(
 
-sifra int,
-
-broj varchar(10),
-kupac varchar(100)
+sifra int not null primary key identity (1,1),
+broj varchar(10) not null,
+kupac varchar(100) 
 );
 
 create table proizvodi(
 
-sifra int,
-naziv varchar(50),
-cijena decimal(18,2)
+sifra int not null primary key identity (1,1),
+naziv varchar(50) not null,
+cijena decimal(18,2) not null
 );
 
 create table stavke(
-racun int,
-proizvod int,
+racun int not null references racuni,
+proizvod int not null references proizvodi,
 kolicina decimal(5,3)
 );
