@@ -1,4 +1,4 @@
-﻿--create database edunovawp8;
+﻿
 
 use master;
 go
@@ -15,6 +15,29 @@ cijena decimal(18,2) null,
 datumpokretanja datetime,
 aktivan bit not null default 0
 );
+
+
+create table grupe(
+sifra int not null primary key identity (1,1),
+naziv varchar(20)not null,
+smjer int not null references smjerovi (sifra),
+predavac varchar(50)
+
+);
+
+
+create table polaznici(
+sifra int not null primary key identity (1,1),
+ime varchar(50) not null,
+prezime varchar(50) not null,
+email varchar(100)
+);
+
+create table clanovi(
+grupa int  not null references grupe (sifra),
+polaznik int not null references polaznici (sifra) 
+);
+
 
 --1 ->
 insert into smjerovi (naziv ,cijena,datumpokretanja,aktivan)
@@ -79,7 +102,7 @@ insert into polaznici (prezime, ime, email) values
 ('Mirković','Milivoje','daky696@gmail.com'),
 ('Andraković','Nenad','nenad.andrak@gmail.com');
 
-insert into clanovi(grupa,polaznik) valeus
+insert into clanovi(grupa,polaznik) values
 (1,1),(1,2),(1,3),(1,4),(1,5),(1,6),(1,7),(1,8),(1,9),(1,10),(1,11),(1,12),(1,13),(1,14),(1,15),
 (1,16),(1,17),(1,18),(1,19),(1,20),(1,21),(1,22),(1,23),(1,24),(1,25),(1,26),(1,27),(1,28),(1,29);
 
@@ -87,23 +110,5 @@ insert into clanovi(grupa,polaznik) values
 (3,7),(3,17),(3,27)
 
 
-create table grupe(
-sifra int not null primary key identity (1,1),
-naziv varchar(20)not null,
-smjer int not null references smjerovi (sifra),
-predavac varchar(50)
-
-);
 
 
-create table polaznici(
-sifra int not null primary key identity (1,1),
-ime varchar(50) not null,
-prezime varchar(50) not null,
-email varchar(100)
-);
-
-create table clanovi(
-grupa int  not null references grupe (sifra),
-polaznik int not null references polaznici (sifra) 
-);
