@@ -40,3 +40,7 @@ kontakt varchar(50)null,
 ugovor int not null references ugovor
 );
 
+
+select * from najmodavac
+insert into najmodavac(ime,prezime)
+values ('Zlata','Vučić');
