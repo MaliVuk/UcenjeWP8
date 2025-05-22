@@ -185,3 +185,7 @@ insert into ugovor (datum_pocetka,datum_zavrsetka,stan,najmoprimac)
 values ('2025-02-01',null,1,1),
         ('2023-01-01',null,2,2);
 
+select* from rezije
+update rezije
+set iznos = 24.42, datum_placanja = '2025-04-22'
+where mjesec = 4 and godina = 2025 and tip = 'internet'and stan =1
