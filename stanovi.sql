@@ -1,10 +1,10 @@
 ﻿use master;
 go
-drop database if exists stanovi2;
+drop database if exists iznajmljivanje;
 go
-create database stanovi2 collate Croatian_CI_AS;
+create database iznajmljivanje collate Croatian_CI_AS;
 go
-use stanovi2;
+use iznajmljivanje;
 go
 
 create table najmodavac (
@@ -43,7 +43,7 @@ najmoprimac int not null references najmoprimac(sifra)
 );
 
 
-select * from najmodavac
+--select * from najmodavac
 insert into najmodavac(ime,prezime)
 values ('Zlata','Vučić');
 --delete from najmodavac
@@ -82,7 +82,7 @@ select * from rezije;
 --  and year (datum_placanja) = 2025
 --  and stan= 1;
 
-select *from najmoprimac;
+--select *from najmoprimac;
 insert into najmoprimac(ime_ili_naziv,kontakt)
 values ('Erna Rob',0953669852),
        ('Mlinar', 0914232276);
@@ -94,4 +94,4 @@ insert into ugovor(datum_pocetka,datum_zavrsetka,stan,najmoprimac)
 values ('2025-02-01', null, 1, 1),
 	   ('2023-01-01', null, 2, 2);
 	   
-	   select* from ugovor;
+	   --select* from ugovor;
