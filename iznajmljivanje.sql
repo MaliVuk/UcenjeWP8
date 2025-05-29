@@ -95,3 +95,20 @@ values ('2025-02-01', null, 1, 1),
 	   ('2023-01-01', null, 2, 2);
 	   
 	   --select* from ugovor;
+
+
+
+select stan,sum(iznos) as ukupno_rezije
+from rezije
+where month (datum_placanja)=4
+ and year (datum_placanja)=2025
+ group by stan;
+
+
+
+--izmjena iznosa i tipa rezija
+-- update rezije 
+ --set iznos=10.05
+ --where stan=1
+ --and tip='plin'
+ --and iznos is null;
