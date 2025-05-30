@@ -78,7 +78,10 @@ punac int not null references punac (sifra)
 insert into sestra (introvertno,haljina,marka,hlače,narukvica)
 values (1,'plava',150.25,'traper',2),
         (0,'crvena',90.50,'pamučne',1),
-		(1,'bajkovita', 120.00, 'kožne', 3);
+		(1,'bajkovita', 120.00, 'kožne', 3),
+        (0,'zelena',75.00,'kratke',4),
+        (1,'ljubicasta',110.00,'siroke',5); 
+		
 --select*from svekar;
 insert into svekar(boja_ociju,prstena,dukserica,lipa,eura,majica)
 values('smeđa', 2, 'Nike', 15.25000000, 12.3400000, 'Crna'),
@@ -145,3 +148,13 @@ inner join mladic mld on mld.muskarac = m.sifra
 where z.hlace like 'a%'
   and se.haljina like '%ba%'
 order by m.hlace desc;
+
+
+--6.zad.prikažite kolone haljina i maraka iz tablice sestra čiji se primarni ključ ne nalazi u tablici sestra_savekar.
+select s.haljina,s.marka
+from sestra s
+left join sestra_svekar ss on s.sifra=ss.sestra
+where ss. sestra is null;
+
+
+
