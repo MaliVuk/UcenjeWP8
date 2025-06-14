@@ -70,7 +70,45 @@ namespace Ucenje
                 }
 
             }
+            Console.WriteLine("*********************");
+
+            string grad = "Osijek";
+            for (int i = 0; i < grad.Length; i++)
+            {
+                Console.WriteLine(grad[i]);
+
+
+            }
+            Console.WriteLine("*********************");
+            for (int i = 1; i<= 10; i++) {
+             for(int j = 1; j <=10;j++)
+             {
+                    Console.Write("{0}",i*j);
+             }
+                Console.WriteLine();
+            }
+            //dz
+
+
+            Console.WriteLine("*********************");
+            for (int i = 0; i < 10; i++)
+            {
+                if (i == 2)
+                {
+                    continue;
+                }
+                if (i == 7)
+                {
+                    break;
+                }
+            Console.WriteLine(i);
+            }
+
+            Console.WriteLine("*********************");
+
+
         }
+
     }
 }
         
