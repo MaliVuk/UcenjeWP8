@@ -9,7 +9,8 @@ using Ucenje;
 //E02Varijable.Izvedi();
 //E01UlazIzlaz.Izvedi();
 //E06Nizovi.Izvedi();
-   E06Zad1.Izvedi();
+// E06Zad1.Izvedi();
+E07ForPetlja.Izvedi();
 
 
 
