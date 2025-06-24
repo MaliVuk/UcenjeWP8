@@ -3,8 +3,9 @@
 using Ucenje;
 
 // ključna riječ new poziva konstruktor klase
-new Ucenje.E14KlasaObjekt.Program();
+//new Ucenje.E14KlasaObjekt.Program();
 
+ UcenjeNajmodavac.Izvedi();
 //E11Z02.Izvedi();
 
 

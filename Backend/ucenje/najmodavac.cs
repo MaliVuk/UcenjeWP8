@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ucenje
 {
-    internal class najmodavac
+    internal class UcenjeNajmodavac
     {
     }
 }
