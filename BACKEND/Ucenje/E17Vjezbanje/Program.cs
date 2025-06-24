@@ -4,10 +4,12 @@ namespace Ucenje.E17Vjezbanje
 {
     public class Program
     {
-        public Zadatak1 Zad1 { get; set; }s
+        public Zadatak1 Zad1 { get; set; }
         public Zadaca Zadaca { get; set; }
 
-        public Program()
+
+         public Program()
+      
         {
             Zad1 = new Zadatak1();
             Zadaca = new Zadaca();
@@ -22,6 +24,7 @@ namespace Ucenje.E17Vjezbanje
             Console.WriteLine("1. Zbrajanje dvaju brojeva");
             Console.WriteLine("2. Izračun površine pravokutnika");
             Console.WriteLine("3. Provjera je li broj pozitivan, negativan ili nula");
+            Console.WriteLine("4. Zbroj elemenata niza");
             Console.WriteLine("*******************************");
 
             OcitajOdabir();
@@ -45,6 +48,9 @@ namespace Ucenje.E17Vjezbanje
                     break;
                 case 3:
                     Zadaca.ProvjeriBroj();
+                    break;
+                case 4:
+                    Zadaca.ZbrojElemenataNiza();
                     break;
                 default:
                     Console.WriteLine("Nepostojeći odabir.");

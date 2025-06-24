@@ -4,6 +4,10 @@ namespace Ucenje.E17Vjezbanje
 {
     public class Zadaca
     {
+        public Zadaca()
+        {
+        }
+
         public void IzracunajPovrsinu()
         {
             Console.Write("Unesi duljinu pravokutnika: ");
@@ -28,5 +32,23 @@ namespace Ucenje.E17Vjezbanje
             else
                 Console.WriteLine("Broj je nula.");
         }
+        public void ZbrojElemenataNiza()
+        {
+            Console.Write("Koliko elemenata ima niz? ");
+            int n = int.Parse(Console.ReadLine());
+
+            int[] niz = new int[n];
+            int zbroj = 0;
+
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write("Unesi " + (i + 1) + ". broj: "); 
+                niz[i] = int.Parse(Console.ReadLine());
+                zbroj += niz[i];
+            }
+
+            Console.WriteLine("Zbroj elemenata niza je: " + zbroj);
+        }
+
     }
 }
