@@ -2,6 +2,9 @@
 
 using Ucenje;
 
+
+
+new Ucenje.E17Vjezbanje.Program();
 // ključna riječ new poziva konstruktor klase
 //new Ucenje.E14KlasaObjekt.Program();
 
